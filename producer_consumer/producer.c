@@ -47,6 +47,7 @@ int main() {
         buf->in = (buf->in + 1) % BUFFER_SIZE;
         buf->count++;
         printf("Produced: %d (count=%d)\n", item, buf->count);
+        print_buffer(buf); // Hiển thị trạng thái buffer
 
         sem_op(semid, SEM_MUTEX, 1);  // unlock
         sem_op(semid, SEM_FULL, 1);  // signal full

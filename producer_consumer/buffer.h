@@ -27,4 +27,19 @@ typedef struct {
 #define SEM_EMPTY 1
 #define SEM_FULL  2
 
+// Hiển thị trạng thái buffer FIFO
+static inline void print_buffer(const SharedBuffer* buf) {
+    printf("[BUFFER FIFO]: ");
+    if (buf->count == 0) {
+        printf("(empty)\n");
+        return;
+    }
+    int idx = buf->out;
+    for (int i = 0; i < buf->count; i++) {
+        printf("%d ", buf->buffer[idx]);
+        idx = (idx + 1) % BUFFER_SIZE;
+    }
+    printf("\n");
+}
+
 #endif // BUFFER_H
