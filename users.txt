@@ -3,6 +3,6 @@
 # NEXT_USER_ID: 4
 # Format: ID|Name|Email|Password|Age|IsActive|CreatedAt
 # ==========================================
-1|chinh|chinhlq@gmail.com|1234|20|1|1762170185
+1|chinh1|chinh123@gmail.com|123456|21|1|1762170185
 2|bao|bao@gmail.com|123456|22|1|1762172127
 3|chinh@gmail.com|chinh@gmail.com|1234|22|1|1762172500
