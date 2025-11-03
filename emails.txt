@@ -1,0 +1,7 @@
+# Emails Database - Text Format
+# EMAIL_COUNT: 2
+# NEXT_EMAIL_ID: 3
+# Format: ID|SenderID|ReceiverID|Subject|Content|SentAt|IsRead|IsDeleted
+# ======================================================================
+1|1|2|test|hi !how are you\n|1762172645|0|0
+2|2|1|hello|hhhasdaddadad\nasdhakdskdj\nsadadadad\n|1762172726|1|0
