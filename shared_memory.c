@@ -1,6 +1,6 @@
 #include "mail_system.h"
 
-static int shm_id = -1;
+int shm_id = -1;  // Exported for monitoring
 
 int create_shared_memory() {
     key_t key = ftok(".", SHM_KEY_USERS);
@@ -97,7 +97,7 @@ void display_shared_memory_info(SharedMemoryData* shm_ptr) {
     printf("╚════════════════════════════════════════════════════════╝\n");
     
     // Control Information
-    printf("\n📊 CONTROL INFORMATION:\n");
+    printf("\nCONTROL INFORMATION:\n");
     printf("├─ Shared Memory ID: %d\n", shm_id);
     printf("├─ Memory Size: %.2f MB (%lu bytes)\n", 
            sizeof(SharedMemoryData) / (1024.0 * 1024.0),
@@ -108,7 +108,7 @@ void display_shared_memory_info(SharedMemoryData* shm_ptr) {
     printf("└─ Next Email ID: %d\n", shm_ptr->control.next_email_id);
     
     // Users in Memory
-    printf("\n👥 USERS IN SHARED MEMORY:\n");
+    printf("\n USERS IN SHARED MEMORY:\n");
     if (shm_ptr->control.user_count == 0) {
         printf("   (No users in memory)\n");
     } else {
@@ -129,7 +129,7 @@ void display_shared_memory_info(SharedMemoryData* shm_ptr) {
     }
     
     // Emails in Memory
-    printf("\n📧 EMAILS IN SHARED MEMORY:\n");
+    printf("\n EMAILS IN SHARED MEMORY:\n");
     if (shm_ptr->control.email_count == 0) {
         printf("   (No emails in memory)\n");
     } else {
@@ -153,7 +153,7 @@ void display_shared_memory_info(SharedMemoryData* shm_ptr) {
     }
     
     // Memory Usage
-    printf("\n💾 MEMORY USAGE:\n");
+    printf("\nMEMORY USAGE:\n");
     size_t used_user_memory = shm_ptr->control.user_count * sizeof(User);
     size_t used_email_memory = shm_ptr->control.email_count * sizeof(Email);
     size_t total_used = sizeof(ControlData) + used_user_memory + used_email_memory;

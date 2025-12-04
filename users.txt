@@ -1,8 +1,9 @@
 # Users Database - Text Format
-# USER_COUNT: 3
-# NEXT_USER_ID: 4
+# USER_COUNT: 4
+# NEXT_USER_ID: 5
 # Format: ID|Name|Email|Password|Age|IsActive|CreatedAt
 # ==========================================
-1|chinh1|chinh123@gmail.com|123456|21|1|1762170185
-2|bao|bao@gmail.com|123456|22|1|1762172127
-3|chinh@gmail.com|chinh@gmail.com|1234|22|1|1762172500
+1|chinh|chinh@gmail.com|123456|22|1|1763728983
+2|bao|bao@gmail.com|12345|21|1|1763729056
+3|chau|chau123@gmail.com|123456|21|1|1763729081
+4|khiem|khiem@gmail.com|123456|21|1|1764033248

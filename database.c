@@ -204,7 +204,6 @@ void load_emails_from_file(SharedMemoryData* shm_ptr) {
         } else if (strncmp(line, "# NEXT_EMAIL_ID:", 16) == 0) {
             sscanf(line + 16, "%d", &saved_next_email_id);
         } else if (line[0] != '#' && strlen(line) > 1) {
-            // Đây là data line, break để đọc emails
             fseek(file, -strlen(line), SEEK_CUR);
             break;
         }

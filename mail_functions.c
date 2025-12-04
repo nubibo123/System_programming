@@ -142,14 +142,14 @@ void view_sent_mails(SharedMemoryData* shm_ptr) {
             printf("\n╔════════════════════════════════════════════════════════╗\n");
             printf("║                    EMAIL DETAILS                       ║\n");
             printf("╚════════════════════════════════════════════════════════╝\n");
-            printf("\n📧 Email ID: %d\n", email->email_id);
-            printf("👤 From: %s <%s>\n", sender ? sender->name : "Unknown", sender ? sender->email : "unknown@email.com");
-            printf("👤 To: %s <%s>\n", receiver ? receiver->name : "Unknown", receiver ? receiver->email : "unknown@email.com");
-            printf("📌 Subject: %s\n", email->subject);
-            printf("📅 Sent: %s", ctime(&email->sent_at));
-            printf("📊 Status: %s\n", email->is_read ? "Read by receiver" : "Unread");
+            printf("\n Email ID: %d\n", email->email_id);
+            printf(" From: %s <%s>\n", sender ? sender->name : "Unknown", sender ? sender->email : "unknown@email.com");
+            printf(" To: %s <%s>\n", receiver ? receiver->name : "Unknown", receiver ? receiver->email : "unknown@email.com");
+            printf(" Subject: %s\n", email->subject);
+            printf(" Sent: %s", ctime(&email->sent_at));
+            printf(" Status: %s\n", email->is_read ? "Read by receiver" : "Unread");
             printf("\n" "────────────────────────────────────────────────────────\n");
-            printf("📄 Content:\n\n%s\n", email->content);
+            printf(" Content:\n\n%s\n", email->content);
             printf("────────────────────────────────────────────────────────\n\n");
         }
     }
